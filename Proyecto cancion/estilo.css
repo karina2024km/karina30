@@ -1,0 +1,324 @@
+/* Estilo global */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #000000, #000000); /* Degradado atractivo */
+    font-family: 'Poppins', Arial, sans-serif;
+    color: white;
+    text-align: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    flex-direction: column; /* Acomoda elementos verticalmente */
+    gap: 20px; /* Espaciado entre elementos */
+}
+
+/* Botón personalizado */
+.custom-button {
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+}
+
+.custom-button:hover {
+    transform: translateY(-5px) scale(1.05);
+    background: linear-gradient(45deg, #ff758c, #ff563a);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.custom-button:active {
+    transform: translateY(0) scale(1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Contenedor de letras */
+.lyrics {
+    font-size: 30px;
+    text-align: center;
+    line-height: 1.8;
+    width: 100%;
+    height: 90vh;
+    overflow-y: hidden;
+    padding: 20px;
+    position: relative;
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Contenedor de imágenes */
+.image-container {
+    position: absolute;
+    top: 0;
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    right: 0;
+}
+
+.image-container img {
+    width: 80%; /* Tamaño ajustado */
+    border-radius: 20px;
+    height: auto;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Animación de letras */
+.lyrics p {
+    margin: 50px 0;
+    font-size: 35px;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideIn 1.2s forwards ease-in-out;
+}
+
+/* Efecto de letras más dinámico */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    70% {
+        opacity: 1;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Efecto de corazones */
+#hearts-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.heart {
+    position: absolute;
+    font-size: 25px;
+    color: #ff6b81;
+    animation: heartAnimation 2.5s ease-in-out infinite;
+    filter: drop-shadow(0 2px 4px rgba(255, 107, 129, 0.8));
+}
+
+/* Animación de corazones */
+@keyframes heartAnimation {
+    0% {
+        opacity: 1;
+        transform: scale(0.5) translateY(0);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.2) translateY(-120px);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.8) translateY(-240px);
+    }
+}
+
+/* Media queries para dispositivos pequeños */
+@media (max-width: 768px) {
+    .lyrics {
+        font-size: 25px;
+        padding: 10px;
+    }
+
+    .custom-button {
+        font-size: 16px;
+        padding: 10px 30px;
+    }
+
+    .image-container img {
+        width: 60%;
+    }
+}
+/* Estilo global */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+    height: 100vh;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+/* Botón personalizado */
+.custom-button {
+    background-color: #d93215;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.custom-button:hover {
+    transform: scale(1.1);
+    background-color: #b12108;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+.custom-button:active {
+    transform: scale(1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenedor de letras */
+.lyrics {
+    font-size: 30px;
+    text-align: center;
+    line-height: 1.8;
+    width: 100%;
+    margin: 0 auto;
+    height: 90vh;
+    overflow-y: hidden;
+    padding: 20px;
+    position: relative;
+}
+
+/* Contenedor para el video con fondo PNG */
+#leftVideoContainer {
+    width: 100%;
+    height: 100%;
+    background-image: url('img/fondo.png'); /* Ruta de tu imagen PNG */
+    background-size: cover;  /* Asegura que el fondo cubra todo el contenedor */
+    background-position: center;  /* Centra el fondo */
+    position: relative;  /* Posiciona el video sobre el fondo */
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Estilo para video */
+#leftVideo {
+    width: 100%;  /* Asegura que el video ocupe todo el ancho */
+    height: 100%; /* Asegura que el video ocupe todo el alto */
+    object-fit: cover; /* Hace que el video cubra el contenedor */
+    border-radius: 10px; /* Bordes redondeados para el video */
+    position: absolute; /* Posiciona el video sobre el fondo */
+    top: 0;
+    left: 0;
+}
+
+/* Estilo para imágenes */
+#rightImage {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Animación de letras deslizándose desde la izquierda, derecha o abajo */
+.lyrics p {
+    margin: 100px 0;
+    font-size: 35px;
+    opacity: 0;
+    animation: slideIn 1.5s forwards;
+}
+
+/* Animación de deslizamiento con rebote */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(80px) translateX(-90px);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(-30px) translateX(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) translateX(0);
+    }
+}
+
+/* Efecto de corazón */
+#hearts-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.heart {
+    position: absolute;
+    font-size: 30px;
+    color: red;
+    animation: heartAnimation 2s ease-in-out infinite;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.fadeOut {
+    animation: fadeOut 1s forwards; /* Aplicar animación de desvanecimiento */
+}
+.gif-image {
+    width: 100%; /* Ajusta el tamaño al 100% del contenedor */
+    max-width: 480px; /* Máximo tamaño */
+    height: auto;
+    margin-bottom: 20px; /* Espaciado entre el GIF y el botón */
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+/* Si deseas ocultar el GIF después de hacer clic en el botón */
+.gif-image.hidden {
+    opacity: 0;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video y Letra</title>
+    <link rel="stylesheet" href="estilo.css">
+    <style>
+        /* Estilos para centrar el GIF */
+        .gif-image {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+            z-index: 10; /* Asegura que el GIF esté por encima de otros elementos */
+        }
+        /* Puedes agregar más estilos si es necesario para el layout */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="custom-button" id="playButton">Haz clic acá</button>
+        
+        <div class="lyrics" id="lyrics" style="display: none;">
+            <div class="image-container left" id="leftImageContainer">
+                <!-- Contenedor para el video con fondo PNG -->
+                <div id="leftVideoContainer">
+                    <video id="leftVideo" src="img/WhatsApp Video 2024-12-31 at 12.27.53 AM.mp4" alt="Video izquierdo" autoplay muted loop></video>
+                </div>
+            </div>
+            <h1>🎵 FELIZ AÑO NUEVO 2025<3🎵</h1>
+            <p id="lyricsContent"></p>
+            <div class="image-container right" id="rightImageContainer">
+                <!-- Video con la etiqueta <video> bien cerrada -->
+                <video id="rightVideo" src="img/gio.mp4" alt="Video derecha" autoplay muted loop></video>
+            </div>
+        </div>
+
+        <!-- GIF que aparece al reproducir la segunda canción -->
+        <img src="img/1.gif" alt="Gif animado" id="gifImage" class="gif-image">
+
+    </div>
+
+    <!-- Primer audio -->
+    <audio id="audio1" src="CHAVOGUAPO PODEROSO ASOMBROSO CHAVO.mp3"></audio>
+    
+    <!-- Segundo audio (inicialmente en pausa) -->
+    <audio id="audio2" src="mix.mpeg" style="display:none;"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
